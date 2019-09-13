@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
+import { Provider } from 'react-redux'
+import GameContainer from './GameContainer'
+import Dashboard from './Dashboard'
+import { Row, Col } from 'react-bootstrap';
+import store from './store'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Row>
+        <Col id='games_container' xs={12} md={3}>
+          <GameContainer>
+          </GameContainer>
+        </Col>
+        <Col id='dashboard' xs={12} md={9}>
+          <Dashboard>
+          </Dashboard>
+        </Col>
+      </Row>
+    </Provider>
   );
 }
 
