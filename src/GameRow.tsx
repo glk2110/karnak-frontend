@@ -41,7 +41,7 @@ class GameRow extends React.Component<RouteComponentProps<{gameList: string[], i
 
 const mapStateToProps = ({ gameList }: any) => ({ gameList });
 const mapDispatchToProps = (dispatch: any) => ({ 
-	changeGameList(gameList: number[]) {
+	changeGameList(gameList: string[]) {
 		dispatch(updateGameList(gameList))
 	}
 });
