@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { connect } from 'react-redux'
 
-const Dashboard = (props) => {
+const Dashboard: FunctionComponent = (props: any) => {
     return (
       <div>
         {props.gameList}
@@ -9,7 +9,7 @@ const Dashboard = (props) => {
 	);
 }
 
-const mapStateToProps = ({ gameList }) => ({gameList})
+const mapStateToProps = ({ gameList }: any) => ({gameList})
 
 
 export default connect(mapStateToProps)(Dashboard);
