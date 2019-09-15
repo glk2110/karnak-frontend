@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import updateGameList from './actionCreators/updateGameList'
 import { RouteComponentProps } from '@reach/router'
 
-class GameRow extends React.Component<RouteComponentProps<{gameList: number[], id: string, away_team: string, home_team:string, changeGameList: any}>> {
+class GameRow extends React.Component<RouteComponentProps<{gameList: string[], id: string, away_team: string, home_team:string, changeGameList: any}>> {
     render() {
         const gameList = this.props.gameList
         const id = this.props.id
@@ -13,7 +13,7 @@ class GameRow extends React.Component<RouteComponentProps<{gameList: number[], i
         }
         var index = gameList.indexOf(id);
         
-        const removeFromList = (list: number[], index: number) => {
+        const removeFromList = (list: string[], index: number) => {
           if(index > -1){
             list.splice(index, 1)
           }
