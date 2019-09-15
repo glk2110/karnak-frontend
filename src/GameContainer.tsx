@@ -11,7 +11,7 @@ const GameContainer = () => {
             <h1>My Games</h1>
             {games}
           </div>
-          <button id='upload_button' text="hello">
+          <button id='upload_button'>
             ⨁ Add Game
           </button>
         </Fragment>
